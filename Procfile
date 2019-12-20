@@ -1,1 +1,1 @@
-web:  ./gradlew run
+web:  java -jar build/install/todoserver-shadow/lib/todoserver-0.0.1-all.jar
