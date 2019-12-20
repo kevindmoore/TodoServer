@@ -1,1 +1,1 @@
-web:  java -jar build/install/todoserver-shadow/lib/todoserver-0.0.1-all.jar
+web:  java -jar build/libs/todoserver-0.0.1-all.jar
