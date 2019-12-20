@@ -1,0 +1,5 @@
+{
+  "name": "TodoServer",
+  "description": "An API for Todos.",
+  "addons": [ "heroku-postgresql" ]
+}
