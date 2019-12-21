@@ -6,12 +6,15 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.4'
+//        classpath "com.google.cloud.tools:appengine-gradle-plugin:$appengine_plugin_version"
     }
 }
 
 apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'kotlin'
 apply plugin: 'application'
+//apply plugin: 'war'
+//apply plugin: 'com.google.cloud.tools.appengine'
 
 group 'com.mastertechsoftware'
 version '0.0.1'
@@ -49,9 +52,13 @@ dependencies {
     compile "org.jetbrains.exposed:exposed-jdbc:$exposed_version"
     compile "org.postgresql:postgresql:$postgres_version"
     compile "com.zaxxer:HikariCP:$hikaricp_version"
+//    providedCompile "com.google.appengine:appengine:$appengine_version"
 
     testCompile "io.ktor:ktor-server-tests:$ktor_version"
 }
+//kotlin.experimental.coroutines = 'enable'
+
+//task run(dependsOn: ['appengineRun'])
 
 task stage(dependsOn: ['installDist'])
 
